@@ -33,8 +33,13 @@ $(VSIX): syntax
 
 vsix: $(VSIX)
 
-test: out/%.js
-	npm test
+test: test-grammar
+
+.PHONY: test-grammar test-grammar-update
+test-grammar: syntax
+	npx vscode-tmgrammar-snap "src/test/grammar/snap/**/*.tcl"
+test-grammar-update: syntax
+	npx vscode-tmgrammar-snap -u "src/test/grammar/snap/**/*.tcl"
 
 out/syntaxes:
 	mkdir -p $@
