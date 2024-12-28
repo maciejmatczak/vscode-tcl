@@ -1,0 +1,10 @@
+>proc myAmazingProc {} {}
+#^^^^ source.tcl keyword.control.proc.tcl
+#    ^ source.tcl
+#     ^^^^^^^^^^^^^ source.tcl entity.function.name.tcl
+#                  ^ source.tcl
+#                   ^ source.tcl meta.brace.curly.proc.args.open.tcl
+#                    ^ source.tcl meta.brace.curly.proc.args.close.tcl
+#                     ^ source.tcl meta.curly.enclosed
+#                      ^ source.tcl meta.curly.enclosed meta.brace.curly.open.tcl
+#                       ^ source.tcl meta.curly.enclosed meta.brace.curly.close.tcl
